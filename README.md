@@ -20,8 +20,21 @@ interpreted rather than just reported.
 | [`hw2-linear-classifiers/q1-raisin-hinge-classifier`](hw2-linear-classifiers/q1-raisin-hinge-classifier) | Binary linear classification | Linear classifier trained with hinge loss on the Raisin dataset, 2D decision boundary |
 | [`hw2-linear-classifiers/q2-penguins-logistic-regression`](hw2-linear-classifiers/q2-penguins-logistic-regression) | Logistic regression | Binary logistic regression with L2 regularization, stable sigmoid, hyper-parameter search on a validation set |
 | [`hw2-linear-classifiers/q3-balance-scale-ovr`](hw2-linear-classifiers/q3-balance-scale-ovr) | Multiclass classification | One-vs-Rest logistic regression on an imbalanced 3-class problem, Macro-F1 and error analysis |
+| [`hw3-neural-network-iris`](hw3-neural-network-iris) | Neural networks | A 4-12-3 network with manual forward pass, softmax, cross-entropy, backpropagation and gradient descent on Iris |
 
 Each project folder has its own README with the approach, results and how to run it.
+
+## Results at a glance
+
+| Project | Key result |
+|---|---|
+| House price regression | Test RMSE ≈ $9.8k (about 7.5 % of the mean price); identical to scikit-learn's closed-form solution |
+| Mystery function | Training RMSE 0 — the hidden cubic function and its 20 weights are recovered exactly |
+| Gradient descent comparison | Mini-batch GD reaches the lowest loss (0.244) with 8,000 updates; SGD needs 500,000 |
+| Raisin (hinge loss) | Test accuracy 90.4 % with 7 features, 88.9 % with only `Area` and `Perimeter` |
+| Penguins (logistic regression) | Test accuracy 100 % — Adelie and Gentoo are almost linearly separable |
+| Balance Scale (One-vs-Rest) | Accuracy 88.8 % but Macro-F1 only 0.62: a linear model never predicts the rare "balanced" class |
+| Iris neural network | Test accuracy 96.7 % (29 / 30) with a from-scratch network |
 
 ## Setup
 
@@ -55,6 +68,7 @@ The datasets are small and are included next to the code that uses them so each 
 | `001_Raisin_Dataset.xlsx` | HW2 Q1 | Raisin dataset (UCI Machine Learning Repository) |
 | `002_penguins.csv` | HW2 Q2 | Palmer Penguins dataset |
 | `003_balance-scale.data.csv` | HW2 Q3 | Balance Scale dataset (UCI Machine Learning Repository) |
+| Iris | HW3 | Loaded from scikit-learn (`sklearn.datasets.load_iris`), no file needed |
 
 Please refer to the original sources for each dataset's license and citation.
 
