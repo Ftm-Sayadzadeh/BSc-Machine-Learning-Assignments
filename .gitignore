@@ -5,6 +5,9 @@ __pycache__/
 venv/
 .ipynb_checkpoints/
 
+# Files generated when re-running the HW4 notebook
+water_potability_final_outputs/
+
 # Secrets / local config
 .env
 

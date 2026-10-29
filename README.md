@@ -21,6 +21,7 @@ interpreted rather than just reported.
 | [`hw2-linear-classifiers/q2-penguins-logistic-regression`](hw2-linear-classifiers/q2-penguins-logistic-regression) | Logistic regression | Binary logistic regression with L2 regularization, stable sigmoid, hyper-parameter search on a validation set |
 | [`hw2-linear-classifiers/q3-balance-scale-ovr`](hw2-linear-classifiers/q3-balance-scale-ovr) | Multiclass classification | One-vs-Rest logistic regression on an imbalanced 3-class problem, Macro-F1 and error analysis |
 | [`hw3-neural-network-iris`](hw3-neural-network-iris) | Neural networks | A 4-12-3 network with manual forward pass, softmax, cross-entropy, backpropagation and gradient descent on Iris |
+| [`hw4-water-potability`](hw4-water-potability) | Final project: model comparison | Ten classifiers written from scratch (Logistic Regression, KNN, SVM, trees, boosting, bagging, MLP, Naive Bayes) with cross-validation, threshold tuning and a safety-oriented error analysis |
 
 Each project folder has its own README with the approach, results and how to run it.
 
@@ -35,6 +36,7 @@ Each project folder has its own README with the approach, results and how to run
 | Penguins (logistic regression) | Test accuracy 100 % — Adelie and Gentoo are almost linearly separable |
 | Balance Scale (One-vs-Rest) | Accuracy 88.8 % but Macro-F1 only 0.62: a linear model never predicts the rare "balanced" class |
 | Iris neural network | Test accuracy 96.7 % (29 / 30) with a from-scratch network |
+| Water potability (10 models) | A very noisy dataset: best test accuracy 64.8 % vs. a 61.0 % majority baseline, best ROC-AUC 0.65 — and the notebook reports this honestly |
 
 ## Setup
 
@@ -56,6 +58,9 @@ cd hw2-linear-classifiers/q1-raisin-hinge-classifier
 python raisin_hinge_classifier.py
 ```
 
+HW4 is a Jupyter notebook instead: run `jupyter notebook hw4-water-potability/water_potability_classification.ipynb`
+(its outputs are already saved in the notebook, so it can also be read directly on GitHub).
+
 All experiments use a fixed random seed (42) so the results are reproducible.
 
 ## Data
@@ -69,6 +74,7 @@ The datasets are small and are included next to the code that uses them so each 
 | `002_penguins.csv` | HW2 Q2 | Palmer Penguins dataset |
 | `003_balance-scale.data.csv` | HW2 Q3 | Balance Scale dataset (UCI Machine Learning Repository) |
 | Iris | HW3 | Loaded from scikit-learn (`sklearn.datasets.load_iris`), no file needed |
+| `water_potability.csv` | HW4 | Kaggle dataset `evelin13/water-potability-2` — **not included**, see the HW4 README |
 
 Please refer to the original sources for each dataset's license and citation.
 
