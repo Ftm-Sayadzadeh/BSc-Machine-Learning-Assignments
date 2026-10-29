@@ -21,7 +21,7 @@ interpreted rather than just reported.
 | [`hw2-linear-classifiers/q2-penguins-logistic-regression`](hw2-linear-classifiers/q2-penguins-logistic-regression) | Logistic regression | Binary logistic regression with L2 regularization, stable sigmoid, hyper-parameter search on a validation set |
 | [`hw2-linear-classifiers/q3-balance-scale-ovr`](hw2-linear-classifiers/q3-balance-scale-ovr) | Multiclass classification | One-vs-Rest logistic regression on an imbalanced 3-class problem, Macro-F1 and error analysis |
 | [`hw3-neural-network-iris`](hw3-neural-network-iris) | Neural networks | A 4-12-3 network with manual forward pass, softmax, cross-entropy, backpropagation and gradient descent on Iris |
-| [`hw4-water-potability`](hw4-water-potability) | Final project: model comparison | Ten classifiers written from scratch (Logistic Regression, KNN, SVM, trees, boosting, bagging, MLP, Naive Bayes) with cross-validation, threshold tuning and a safety-oriented error analysis |
+| [`final-project-water-potability`](final-project-water-potability) | Final project: model comparison | Ten classifiers written from scratch (Logistic Regression, KNN, SVM, trees, boosting, bagging, MLP, Naive Bayes) with cross-validation, threshold tuning and a safety-oriented error analysis |
 
 Each project folder has its own README with the approach, results and how to run it.
 
@@ -36,7 +36,7 @@ BSc-Machine-Learning/
 │   ├── q2-penguins-logistic-regression/
 │   └── q3-balance-scale-ovr/
 ├── hw3-neural-network-iris/
-├── hw4-water-potability/
+├── final-project-water-potability/
 ├── requirements.txt
 └── README.md
 ```
@@ -74,11 +74,11 @@ cd hw2-linear-classifiers/q1-raisin-hinge-classifier
 python raisin_hinge_classifier.py
 ```
 
-HW4 is a Jupyter notebook instead: run `jupyter notebook hw4-water-potability/water_potability_classification.ipynb`
+The final project is a Jupyter notebook instead: run `jupyter notebook final-project-water-potability/water_potability_classification.ipynb`
 from inside its folder (the dataset is next to it). The outputs are already saved in the notebook, so it can also be
 read directly on GitHub; re-running it trains ten models and takes a few minutes.
 
-All experiments use a fixed random seed (42), so the results should reproduce (HW4 has one small caveat, described in its README).
+All experiments use a fixed random seed (42), so the results should reproduce (the final project has one small caveat, described in its README).
 
 ## Data
 
@@ -91,7 +91,7 @@ The datasets are small and are included next to the code that uses them so each 
 | `002_penguins.csv` | HW2 Q2 | Palmer Penguins dataset |
 | `003_balance-scale.data.csv` | HW2 Q3 | Balance Scale dataset (UCI Machine Learning Repository) |
 | Iris | HW3 | Loaded from scikit-learn (`sklearn.datasets.load_iris`), no file needed |
-| `water_potability.csv` | HW4 | Water Potability dataset from Kaggle (the copy `evelin13/water-potability-2`), see the HW4 README |
+| `water_potability.csv` | Final project | Water Potability dataset from Kaggle (the copy `evelin13/water-potability-2`), see the project README |
 
 Please refer to the original sources for each dataset's license and citation.
 
