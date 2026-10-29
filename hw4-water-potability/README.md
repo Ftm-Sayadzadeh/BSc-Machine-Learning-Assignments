@@ -72,3 +72,5 @@ jupyter notebook water_potability_classification.ipynb
 ```
 
 Running the notebook trains all ten models (about 3–4 minutes on Kaggle) and writes figures and tables to a `water_potability_final_outputs/` folder next to the notebook.
+
+**Reproducibility check.** A local re-run on the included dataset finished without errors and reproduced the tables above apart from small numerical differences: the from-scratch SVM moved in the third decimal (for example test accuracy 0.631 instead of 0.633 and dangerous-FP rate 0.180 instead of 0.175; the conclusions do not change), and Gradient Boosting's average precision moved in the fourth decimal. Results can therefore differ a little between environments. The tables in this README come from the outputs saved in the notebook (the original Kaggle run).

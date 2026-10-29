@@ -78,7 +78,7 @@ HW4 is a Jupyter notebook instead: run `jupyter notebook hw4-water-potability/wa
 from inside its folder (the dataset is next to it). The outputs are already saved in the notebook, so it can also be
 read directly on GitHub; re-running it trains ten models and takes a few minutes.
 
-All experiments use a fixed random seed (42) so the results are reproducible.
+All experiments use a fixed random seed (42), so the results should reproduce (HW4 has one small caveat, described in its README).
 
 ## Data
 
