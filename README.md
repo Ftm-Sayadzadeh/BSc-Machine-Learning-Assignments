@@ -25,6 +25,22 @@ interpreted rather than just reported.
 
 Each project folder has its own README with the approach, results and how to run it.
 
+```
+BSc-Machine-Learning/
+├── hw1-regression/
+│   ├── house-price-linear-regression/
+│   ├── mystery-machine-polynomial-regression/
+│   └── gradient-descent-comparison/
+├── hw2-linear-classifiers/
+│   ├── q1-raisin-hinge-classifier/
+│   ├── q2-penguins-logistic-regression/
+│   └── q3-balance-scale-ovr/
+├── hw3-neural-network-iris/
+├── hw4-water-potability/
+├── requirements.txt
+└── README.md
+```
+
 ## Results at a glance
 
 | Project | Key result |
@@ -36,7 +52,7 @@ Each project folder has its own README with the approach, results and how to run
 | Penguins (logistic regression) | Test accuracy 100 % — Adelie and Gentoo are almost linearly separable |
 | Balance Scale (One-vs-Rest) | Accuracy 88.8 % but Macro-F1 only 0.62: a linear model never predicts the rare "balanced" class |
 | Iris neural network | Test accuracy 96.7 % (29 / 30) with a from-scratch network |
-| Water potability (10 models) | A very noisy dataset: best test accuracy 64.8 % vs. a 61.0 % majority baseline, best ROC-AUC 0.65 — and the notebook reports this honestly |
+| Water potability (10 models) | A very noisy dataset: best test accuracy 64.8 % vs. a 61.0 % majority baseline and best ROC-AUC 0.65; the analysis explains why high F1 can be misleading here |
 
 ## Setup
 
@@ -59,7 +75,8 @@ python raisin_hinge_classifier.py
 ```
 
 HW4 is a Jupyter notebook instead: run `jupyter notebook hw4-water-potability/water_potability_classification.ipynb`
-(its outputs are already saved in the notebook, so it can also be read directly on GitHub).
+from inside its folder (the dataset is next to it). The outputs are already saved in the notebook, so it can also be
+read directly on GitHub; re-running it trains ten models and takes a few minutes.
 
 All experiments use a fixed random seed (42) so the results are reproducible.
 
@@ -74,7 +91,7 @@ The datasets are small and are included next to the code that uses them so each 
 | `002_penguins.csv` | HW2 Q2 | Palmer Penguins dataset |
 | `003_balance-scale.data.csv` | HW2 Q3 | Balance Scale dataset (UCI Machine Learning Repository) |
 | Iris | HW3 | Loaded from scikit-learn (`sklearn.datasets.load_iris`), no file needed |
-| `water_potability.csv` | HW4 | Kaggle dataset `evelin13/water-potability-2` — **not included**, see the HW4 README |
+| `water_potability.csv` | HW4 | Water Potability dataset from Kaggle (the copy `evelin13/water-potability-2`), see the HW4 README |
 
 Please refer to the original sources for each dataset's license and citation.
 

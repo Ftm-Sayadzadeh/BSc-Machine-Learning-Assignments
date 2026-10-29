@@ -15,7 +15,7 @@ The notebook keeps its executed outputs, so you can read the tables and figures 
 
 - **Class balance:** 61 % non-potable (0) vs. 39 % potable (1), so always predicting "non-potable" already gives **61.0 % accuracy** — the baseline every model has to beat.
 - **Missing values:** `Sulfate` 23.8 %, `ph` 15.0 %, `Trihalomethanes` 4.9 %.
-- **Not included in this repository.** The notebook was run on Kaggle with the dataset `evelin13/water-potability-2` attached (file `water_potability.csv`). To run it, attach that dataset on Kaggle, or place `water_potability.csv` next to the notebook; the notebook looks in the current folder, `../input` and `/kaggle/input`.
+- **Included as `water_potability.csv`** (522 KB, 3,276 rows) next to the notebook, so it runs as is. It is the file the notebook was run with on Kaggle (dataset `evelin13/water-potability-2`); the row count, missing-value counts and class balance above match the saved notebook outputs. Please check the Kaggle page of the dataset for its license and citation. On Kaggle you can instead attach that dataset; the notebook looks in the current folder, `../input` and `/kaggle/input`.
 
 ## Pipeline
 
@@ -62,6 +62,7 @@ Models selected **by cross-validation only**:
 | File | Purpose |
 |---|---|
 | `water_potability_classification.ipynb` | The whole project: EDA, hand-written preprocessing and models, tuning, evaluation, final analysis |
+| `water_potability.csv` | The dataset (3,276 samples, 9 features + `Potability`) |
 
 ## Run
 
